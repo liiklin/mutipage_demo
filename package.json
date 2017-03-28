@@ -6,6 +6,7 @@
     "start": "node www/development.js",
     "compile": "babel src/ --out-dir app/",
     "watch-compile": "node -e \"console.log('<npm run watch-compile> no longer need, use <npm start> command direct.');console.log();\"",
+    "build": "rm -rf www/static/* view/home/ && NODE_ENV=production webpack --progress --hide-modules",
     "watch": "npm run watch-compile"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-1": "^6.16.0",
+    "bower-webpack-plugin": "^0.1.9",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
